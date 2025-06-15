@@ -54,19 +54,15 @@
             transform: scale(1.1);
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         }
-        
-        .hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
+
         .content {
             display: none;
+            margin: 30px 0 0;
         }
         
         .header {
             text-align: center;
-            margin: 30px 0;
+            margin: 30px;
         }
         
         .header h1 {
@@ -165,42 +161,7 @@
             opacity: 0;
             transition: opacity 0.5s ease;
         }
-        
-        .hearts.active {
-            opacity: 1;
-        }
-        
-        .heart {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #e74c3c;
-            opacity: 0;
-            animation: float 3s ease-in-out forwards;
-        }
-        
-        .heart:before,
-        .heart:after {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 30px;
-            background-color: #e74c3c;
-            border-radius: 20px 20px 0 0;
-        }
-        
-        .heart:before {
-            transform: rotate(-45deg);
-            transform-origin: 100% 100%;
-            left: 10px;
-        }
-        
-        .heart:after {
-            transform: rotate(45deg);
-            transform-origin: 0 100%;
-            left: -10px;
-        }
-        
+
         @keyframes float {
             0% {
                 opacity: 0;
@@ -249,7 +210,8 @@
             <h1>父亲节快乐</h1>
             <p>致爸爸-hyc</p>
         </div>
-        
+        <audio style="margin-top: 0;display:block;top:-20%;margin-left: auto;margin-right: auto;" src="https://hyc-07.github.io/web2/fq.mp3" controls autoplay="autoplay"></audio>
+        <br>
         <div class="card">
             <div class="icon">❤️</div>
             <div class="message">
