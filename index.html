@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>父亲节快乐</title>
     <style>
-        /* 基础样式 */
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +23,6 @@
             color: #333;
         }
         
-        /* 标题样式 */
         .header {
             text-align: center;
             margin: 30px 0;
@@ -42,7 +40,6 @@
             margin-top: 10px;
         }
         
-        /* 卡片样式 */
         .card {
             background: white;
             border-radius: 15px;
@@ -70,7 +67,6 @@
             background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71, #3498db);
         }
         
-        /* 图标样式 */
         .icon {
             width: 100px;
             height: 100px;
@@ -85,7 +81,6 @@
             color: #e74c3c;
         }
         
-        /* 祝福内容 */
         .message {
             margin: 20px 0;
         }
@@ -102,7 +97,6 @@
             color: #666;
         }
         
-        /* 爱心按钮 */
         .heart-btn {
             background: #e74c3c;
             color: white;
@@ -121,7 +115,6 @@
             transform: scale(1.05);
         }
         
-        /* 爱心动画 */
         .hearts {
             position: fixed;
             top: -50px;
@@ -184,7 +177,6 @@
             }
         }
         
-        /* 响应式设计 */
         @media (max-width: 500px) {
             .header h1 {
                 font-size: 2rem;
@@ -216,30 +208,26 @@
         <div class="icon">❤️</div>
         <div class="message">
             <h2>爸爸，您辛苦了！</h2>
-            <p>您用宽厚的肩膀撑起一片天。</p>
-            <p>爸，父亲节快乐！希望你每天都高高兴兴的！</p>
+            <p>父亲节快乐！希望你每天都高高兴兴的！</p>
             <p>今天是属于您的节日，让我对您说一声：</p>
             <p style="font-size: 1.5rem; color: #e74c3c; font-weight: bold; margin: 15px 0;">祝您永远健康快乐！</p>
         </div>
         <button class="heart-btn" id="sendHeart">发送爱心祝福</button>
     </div>
     
-    <div class="hearts" id="hearts">
-        <!-- 爱心将通过JS动态生成 -->
-    </div>
+    <div class="hearts" id="hearts"></div>
+    
     <script>
         document.getElementById('sendHeart').addEventListener('click', function() {
             const hearts = document.getElementById('hearts');
             hearts.classList.add('active');
             
-            // 每0.4秒发射一次爱心（400毫秒）
             for (let i = 0; i < 15; i++) {
                 setTimeout(() => {
                     createHeart();
                 }, i * 400);
             }
             
-            // 3秒后隐藏爱心容器
             setTimeout(() => {
                 hearts.classList.remove('active');
             }, 3000);
@@ -250,7 +238,6 @@
             const heart = document.createElement('div');
             heart.className = 'heart';
             
-            // 随机位置和动画延迟
             const left = Math.random() * 100;
             const delay = Math.random() * 2;
             
@@ -259,7 +246,6 @@
             
             heartsContainer.appendChild(heart);
             
-            // 动画结束后移除元素
             setTimeout(() => {
                 heart.remove();
             }, 3000);
