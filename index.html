@@ -204,13 +204,18 @@
     <div class="surprise-container" id="surpriseContainer">
         <button class="surprise-btn" id="surpriseBtn">惊喜</button>
     </div>
-    
     <div class="content" id="content">
         <div class="header">
             <h1>父亲节快乐</h1>
             <p>致爸爸-hyc</p>
         </div>
-        <audio style="margin-top: 0;display:block;top:-20%;margin-left: auto;margin-right: auto;" src="https://hyc-07.github.io/web2/fq.mp3" controls autoplay="autoplay"></audio>
+        <audio id="fq"style="margin-top: 0;display:block;top:-20%;margin-left: auto;margin-right: auto;" src="https://hyc-07.github.io/web2/fq.mp3" controls ></audio>
+        <script>
+            const audio = document.getElementById('fq');
+            document.getElementById('surpriseBtn').addEventListener('click', () => {
+                audio.play();
+            });
+        </script>
         <br>
         <div class="card">
             <div class="icon">❤️</div>
